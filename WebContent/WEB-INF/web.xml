@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+<!--   <filter> -->
+<!--     <display-name>FilterDemo3</display-name> -->
+<!--     <filter-name>FilterDemo3</filter-name> -->
+<!--     <filter-class>filter.FilterDemo1</filter-class> -->
+<!--   </filter> -->
+<!--   <filter-mapping> -->
+<!--     <filter-name>FilterDemo3</filter-name> -->
+<!--     <url-pattern>/FilterDemo3</url-pattern> -->
+<!--   </filter-mapping> -->
+<!-- 	<listener> -->
+<!-- 		<listener-class>listener.ContextLoaderListener</listener-class> -->
+<!-- 	</listener> -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/classes/applicationContext.xml</param-value>
+	</context-param>
+	
+</web-app>

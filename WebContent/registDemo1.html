@@ -1,0 +1,40 @@
+<html>
+
+<head>
+	<title>title</title>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script>
+		
+		$(function(){
+			
+			$("#sbname").blur(function(){
+				var username=$(this).val();
+				$.get("findUserServlet",{username:username},function(data){
+					// console.log(data);
+					// alert(data);
+					var span=$("#s_username");
+					if(data.userExist){
+						span.css("color","red");
+						span.html(data.msg);
+					}else{
+						console.log(data.msg);
+						span.html(data.msg);
+						span.css("color","green");
+					}
+				},"json");
+			})
+		})
+	</script>
+	
+</head>
+
+<body>
+	<form>
+		<input type="text" id="sbname" name="username" placeholder="please enter username">
+		<span id="s_username"></span><br>
+		<input type="password" name="password" placeholder="please enter password"><br>
+		<input type="submit" value="sign up"><br>
+	</form>
+</body>
+
+</html>

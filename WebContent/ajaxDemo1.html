@@ -1,0 +1,29 @@
+<html>
+
+<head>
+	<title>title</title>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script>
+		function fun(){
+			$.ajax({
+				url:"ajaxServlet",
+				type:"POST",
+				data:{"username":"jack","age":23},
+				success:function(data){
+					alert(data);
+				},
+				error:function(){
+					alert("Error!!!!!");
+				},
+				dataType:"text"
+			})
+		}
+	</script>
+</head>
+
+<body>
+	<input type="button" value="send aync request" onclick="fun()">
+	<input type="text">
+</body>
+
+</html>
